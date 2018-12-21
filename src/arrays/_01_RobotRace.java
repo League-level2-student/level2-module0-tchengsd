@@ -2,6 +2,8 @@ package arrays;
 
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class _01_RobotRace {
@@ -35,6 +37,8 @@ public class _01_RobotRace {
 				rboots[i].move(rng);
 				if (rboots[i].getY() <= 0) {
 					raceOngoing = false;
+					int winner = i + 1;
+					JOptionPane.showMessageDialog(null, "Robot " + winner + " wins!");
 				}
 			}
 		}
